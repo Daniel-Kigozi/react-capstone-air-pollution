@@ -2,8 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { Provider } from 'react-redux';
 import HomePage from './components/home';
 import Pollution from './components/pollution';
+import store from './redux/store';
+
+import { fetchAllCountries } from './redux/countrySlice';
+
+store.dispatch(fetchAllCountries());
 
 const router = createBrowserRouter([
   {
@@ -17,7 +23,9 @@ const router = createBrowserRouter([
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <RouterProvider router={router} />
-  </React.StrictMode>,
+  <>
+    <Provider store={store}>
+      <RouterProvider router={router} />
+    </Provider>
+  </>,
 );
