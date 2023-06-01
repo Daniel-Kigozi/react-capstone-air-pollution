@@ -50,7 +50,7 @@
 ## 💻 Getting Started <a name="getting-started"></a>
 To get a local copy up and running, follow these steps.
 ```
-  git clone https://github.com/Daniel-Kigozi/react-capstone.git
+  git clone https://github.com/Daniel-Kigozi/react-capstone-air-pollution.git
 ```
 ### Prerequisites
 In order to run this project you need:
@@ -59,7 +59,7 @@ In order to run this project you need:
 ### Setup
 Clone this repository to your desired folder:
 
-  git clone https://github.com/Daniel-Kigozi/react-capstone.git
+  git clone https://github.com/Daniel-Kigozi/react-capstone-air-pollution.git
 
 ### Install
 Install this project with:
@@ -95,7 +95,7 @@ You can deploy this project using:
 <!-- CONTRIBUTING -->
 ## 🤝 Contributing <a name="contributing"></a>
 Contributions, issues, and feature requests are welcome!
-Feel free to check the [issues page](https://github.com/Daniel-Kigozi/react-capstone/issues).
+Feel free to check the [issues page](https://github.com/Daniel-Kigozi/react-capstone-air-pollution/issues).
 
 <!-- SUPPORT -->
 ## ⭐️ Show your support <a name="support"></a>
