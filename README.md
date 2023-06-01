@@ -51,11 +51,11 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link]()
+- [Live Demo Link](https://zingy-sunflower-582c53.netlify.app)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-- [Video-presentation]()
+- [Video-presentation](https://www.loom.com/share/0a0b49385dc346559e470532fb07619b)
 
 ## 🚀 Video Presentation <a name="live-demo"></a>
 

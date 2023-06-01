@@ -20,8 +20,6 @@ export const fetchPollutionData = createAsyncThunk('pollution/fetchPollutionData
 
   const { list: [{ main: { aqi: quality }, components: { co, no, no2 } }] } = data;
 
-  // const stringQuality = quality === 1 ? 'Good' : quality === 2 ? 'Fair'
-  //   : quality === 3 ? 'Moderate' : quality === 4 ? 'Poor' : quality === 5 ? 'Very Poor' : null;
   let stringQuality = null;
 
   switch (quality) {
