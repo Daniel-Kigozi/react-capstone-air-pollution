@@ -6,7 +6,6 @@ import CityCard from './city';
 const HomePage = () => {
   const dispatch = useDispatch();
   const countriesArray = useSelector(selectAllCountries);
-  // const [continent, setContinent] = useState('All');
 
   const handleContinentChange = (continent) => {
     dispatch(changeContinent(continent));
