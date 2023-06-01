@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
-import { FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import { faArrowLeft, faMicrophone, faGear} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowLeft, faMicrophone, faGear } from '@fortawesome/free-solid-svg-icons';
 import { useDispatch, useSelector } from 'react-redux';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { fetchPollutionData, selectPollutionData } from '../redux/pollutionSlice';
@@ -24,11 +24,11 @@ const Pollution = () => {
 
   return (
     <>
-    <div className = "popollar">
-      <FontAwesomeIcon className = "arrow-icon" onClick={handleGoBackButton} icon={faArrowLeft} size="1xs" />
-      <FontAwesomeIcon className = "mic-icon" icon={faMicrophone} size="1xs" />
-      <FontAwesomeIcon className = "setting-icon" icon={faGear} size="1xs" />
-    </div>
+      <div className="popollar">
+        <FontAwesomeIcon className="arrow-icon" onClick={handleGoBackButton} icon={faArrowLeft} size="1xs" />
+        <FontAwesomeIcon className="mic-icon" icon={faMicrophone} size="1xs" />
+        <FontAwesomeIcon className="setting-icon" icon={faGear} size="1xs" />
+      </div>
       <div className="polluted">
         <div className="pollution-details">
           <h1>{data.name}</h1>

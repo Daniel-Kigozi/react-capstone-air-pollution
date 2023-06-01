@@ -1,6 +1,6 @@
 import React from 'react';
-import { FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import { faArrowCircleRight } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowCircleRight } from '@fortawesome/free-solid-svg-icons';
 import { useNavigate } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
@@ -15,7 +15,7 @@ const CityCard = ({
       },
     });
   };
-  
+
   return (
     <div
       className="city-card"
@@ -28,7 +28,7 @@ const CityCard = ({
       }}
       tabIndex={0}
     >
-      <FontAwesomeIcon className = "right-arrow" icon={faArrowCircleRight} size="1xs" />
+      <FontAwesomeIcon className="right-arrow" icon={faArrowCircleRight} size="1xs" />
       <h4>{name}</h4>
       <p>
         lat:
