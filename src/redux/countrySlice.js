@@ -4,6 +4,7 @@ const initialState = {
   countries: [],
   stats: 'idle',
   error: '',
+  continent: 'All',
 };
 
 export const fetchAllCountries = createAsyncThunk(
@@ -12,7 +13,6 @@ export const fetchAllCountries = createAsyncThunk(
     const data = await response.json();
     const sortedCountries = [];
 
-    // destructer data to get only what we want
     data.forEach((country) => {
       const {
         name: { common: name }, region: continent, latlng: [lat, lng], flags: { svg: flag },
@@ -33,7 +33,9 @@ export const countriesSlice = createSlice({
   name: 'countries',
   initialState,
   reducers: {
-
+    setContinent: (state, action) => {
+      state.continent = action.payload;
+    },
   },
   extraReducers: (builder) => {
     builder
@@ -52,6 +54,19 @@ export const countriesSlice = createSlice({
   },
 });
 
-export const selectAllCountries = (state) => state.countries.countries;
+export const { setContinent } = countriesSlice.actions;
+
+export const changeContinent = createAsyncThunk('countries/changeContinent', async (params, { dispatch }) => {
+  dispatch(setContinent(params));
+});
+
+export const selectAllCountries = (state) => {
+  if (state.countries.continent === 'All') {
+    return state.countries.countries;
+  }
+
+  return state.countries.countries.filter((country) => country.continent
+  === state.countries.continent);
+};
 
 export default countriesSlice.reducer;

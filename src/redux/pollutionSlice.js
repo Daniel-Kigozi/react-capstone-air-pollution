@@ -15,13 +15,38 @@ export const fetchPollutionData = createAsyncThunk('pollution/fetchPollutionData
     appid: API_KEY,
   })}`);
 
-  const country = params.name;
+  const { country } = params;
   const data = await response.json();
 
   const { list: [{ main: { aqi: quality }, components: { co, no, no2 } }] } = data;
 
+  // const stringQuality = quality === 1 ? 'Good' : quality === 2 ? 'Fair'
+  //   : quality === 3 ? 'Moderate' : quality === 4 ? 'Poor' : quality === 5 ? 'Very Poor' : null;
+  let stringQuality = null;
+
+  switch (quality) {
+    case 1:
+      stringQuality = 'Good';
+      break;
+    case 2:
+      stringQuality = 'Fair';
+      break;
+    case 3:
+      stringQuality = 'Moderate';
+      break;
+    case 4:
+      stringQuality = 'Poor';
+      break;
+    case 5:
+      stringQuality = 'Very Poor';
+      break;
+    default:
+      stringQuality = null;
+      break;
+  }
+
   const airData = {
-    country, quality, co, no, no2,
+    country, stringQuality, co, no, no2,
   };
 
   return airData;
@@ -38,17 +63,21 @@ const pollutionSlice = createSlice({
       .addCase(fetchPollutionData.pending, (state) => {
         state.stats = 'loading';
       })
+
       .addCase(fetchPollutionData.fulfilled, (state, action) => {
         state.stats = 'succeeded';
         state.error = '';
         const { country, ...rest } = action.payload;
-        state.pollutionData.country = rest;
+        state.pollutionData[country] = rest;
       })
+
       .addCase(fetchPollutionData.rejected, (state, action) => {
         state.stats = 'failed';
         state.error = action.error.message;
       });
   },
 });
+
+export const selectPollutionData = (country) => (state) => state.pollution.pollutionData[country];
 
 export default pollutionSlice.reducer;
