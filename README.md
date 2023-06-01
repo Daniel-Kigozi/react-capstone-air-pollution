@@ -33,16 +33,11 @@
 - [📝 License](#license)
 
 <!-- PROJECT DESCRIPTION -->
-# 📖 [Air-pollution] <a name="about-project"></a>
+# 📖 Air-pollution <a name="about-project"></a>
 **[pollution]** is a React App  that displays a list of countries' air polution statisctics from an API
 
 ## 🛠 Built With <a name="built-with"></a>
  React-vite
-
-<!-- Features -->
-### Key Features <a name="key-features"></a>
--
-<!-- LIVE DEMO -->
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
