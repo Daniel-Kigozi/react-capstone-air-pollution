@@ -34,7 +34,7 @@
 
 <!-- PROJECT DESCRIPTION -->
 # 📖 Air-pollution <a name="about-project"></a>
-**[pollution]** is a React App  that displays a list of countries' air polution statisctics from an API
+-Air-pollution is a React App  that displays a list of countries' air polution statisctics from an API
 
 ## 🛠 Built With <a name="built-with"></a>
  React-vite
@@ -51,10 +51,6 @@
 To get a local copy up and running, follow these steps.
 ```
   git clone https://github.com/Daniel-Kigozi/react-capstone-air-pollution.git
-```
-### Prerequisites
-In order to run this project you need:
-``` node
 ```
 ### Setup
 Clone this repository to your desired folder:
@@ -74,12 +70,8 @@ To run the project, execute the following command:
 ### Run tests
 To run tests, run the following command:
 
-  npm run test
+  npm test
 
-### Deployment
-You can deploy this project using:
-```npm run dev
-```
 <!-- AUTHORS -->
 👤 **Daniel Kigozi**
 
@@ -89,8 +81,8 @@ You can deploy this project using:
 
 <!-- FUTURE FEATURES -->
 ## 🔭 Future Features <a name="future-features"></a>
-- [ ] **[Loading Screens]**
-- [ ] **[Further Details on Air pollution]**
+- Loading Screens
+- Further Details on Air pollution
 
 <!-- CONTRIBUTING -->
 ## 🤝 Contributing <a name="contributing"></a>
