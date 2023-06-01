@@ -13,12 +13,35 @@ const CityCard = ({
       },
     });
   };
+  // return (
+  //   <div className="city-card" onClick={() => handleNav('city')}>
+  //     <h4>{name}</h4>
+  //     <p>
+  //       lat :
+  //       {lat}
+  //     </p>
+  //     <img src={flag} alt="country-flag" />
+
+  //   </div>
+  // );
   return (
-      <div className='city-card' onClick={() => handleNavigation('city')}>
-    <h4>{name}</h4>
-    <p>lat : {lat}</p>
+    <div
+      className="city-card"
+      role="button"
+      onClick={() => handleNav('city')}
+      onKeyDown={(e) => {
+        if (e.key === 'Enter') {
+          handleNav('city');
+        }
+      }}
+      tabIndex={0}
+    >
+      <h4>{name}</h4>
+      <p>
+        lat:
+        {lat}
+      </p>
       <img src={flag} alt="country-flag" />
-      
     </div>
   );
 };
